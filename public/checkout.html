@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rincian Pembayaran</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white min-h-screen flex items-center justify-center px-4">
+
+  <div class="max-w-xl w-full bg-white border rounded-2xl shadow p-6 mt-14">
+    <h1 class="text-center text-xl font-semibold mb-6">Checkout</h1>
+
+    <!-- PRODUK DALAM KERANJANG -->
+    <div id="checkout-items" class="space-y-4 mb-6"></div>
+
+    <!-- TOTAL -->
+    <div class="text-right mb-6">
+      <p class="text-lg font-semibold">Total: <span id="total-harga" class="text-black">Rp0</span></p>
+    </div>
+
+    <!-- RINCIAN ALAMAT & PEMBAYARAN -->
+    <div class="border-t mt-4 pt-4 text-sm text-gray-800 space-y-4">
+      <div class="flex flex-col">
+        <label class="mb-1 font-medium">Alamat Lengkap</label>
+        <textarea rows="2" class="border rounded-md px-3 py-2 w-full text-sm" placeholder="Masukkan alamat lengkap..."></textarea>
+      </div>
+      <div class="flex flex-col">
+        <label for="payment-method" class="mb-1 font-medium">Metode Pembayaran</label>
+        <select id="payment-method" class="border rounded-md px-3 py-2 w-full text-sm">
+          <option value="cod">COD / COD Cek Dulu</option>
+          <option value="kartu">Kartu Kredit / Debit</option>
+          <option value="transfer">Transfer Bank</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- TOMBOL AKSI -->
+    <div class="mt-6 flex justify-center">
+      <button id="buat-pesanan" class="bg-blue-600 text-white px-6 py-2 rounded-md font-medium hover:bg-blue-700 transition">
+        Buat Pesanan
+      </button>
+    </div>
+  </div>
+
+  <script src="/script/checkout.js"></script>
+</body>
+</html>
